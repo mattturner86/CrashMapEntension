@@ -1,0 +1,17 @@
+ {
+  "manifest_version": 2,
+
+  "name": "Redirect CrashMap Reports",
+  "description": "This extension redirects CrashMap reports from the CrashMap website to the CycleStreets website",
+  "version": "1.0",
+  "author": "Matt Turner, mattturner86@gmail.com",
+"background": { 
+     "page":"bg.html"
+     },
+  "content_scripts": [
+    {
+      "matches": ["http://www.crashmap.co.uk/Reports/*"],
+      "js": ["popup.js"]
+    }
+  ]
+}
